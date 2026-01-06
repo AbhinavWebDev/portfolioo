@@ -4,13 +4,14 @@
     "homepage": "https://abhinavwebdev.github.io/portfolio",
 
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d out"
-  },
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d out -t true"
+},
   
   "dependencies": {
     "motion": "^11.17.0",  
